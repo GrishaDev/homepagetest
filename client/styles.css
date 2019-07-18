@@ -1,0 +1,142 @@
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    /* 90% {
+      transform: translateX(+2%);
+    } */
+    100% {
+        transform: translateX(0);
+      }
+  }
+
+body{
+    background: url(./assets/bg.jpg) no-repeat center center fixed;
+    /* background-color: goldenrod; */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.header
+{
+    top: 0;
+    text-align: center;
+    width: 100%;
+}
+.container
+{
+    position: absolute;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: auto;
+    background-color: rgba(192,192,192,0.8);
+    margin: 50px;
+    /* padding: 100px; */
+    height: 90%;
+    /* transform: translateX(-50%); */
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+#systems
+{
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    /* flex-wrap: wrap;
+    
+    /* flex-direction: column; */
+    text-align: center;
+    justify-content: center;
+    width: 75%;
+    left: 12.5%
+}
+
+.pic
+{
+    content:url("./assets/syspic.png");
+    object-fit: cover;
+    height: 100%; 
+    width: 100%; 
+}
+
+.system
+{
+    margin-bottom: 250px;
+    width: 300px;
+    height: 150px;
+    /* padding-right: 60px;
+    padding-left: 30px;
+    padding-top: 30px; */
+    padding: 50px;
+    /* flex:1 1 auto; */
+}
+
+.card {
+    position: relative;
+    /* background-color: rgba(136, 148, 172, 0.5); */
+    background-color: rgba(255,255,255,0.6);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    /* box-shadow: rgba(black, 0.19) 0 0 8px 0;
+	border-radius: 4px; */
+    transition: 0.3s;
+    width: 100%;
+}
+
+.card:hover {
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+    transform: translateY(-5%);
+}
+
+.addicon
+{
+    position: fixed;
+    bottom: 6%;
+    left: 3%;
+    padding: 10px;
+    /* transform: translateX(+1700%);
+    transform: translateY(-70%); */
+    /* flex-direction: column-reverse;
+    overflow: auto;
+    flex: 1; */
+    /* float: left; */
+    /* width: 300px;
+    height: 100px; */
+    transition-duration: 0.5s;
+    /* color:blue; */
+    /* padding: 2em; */
+    /* transform: translateX(+50%);
+    transform: translateY(-50%); */
+}
+
+.addicon:hover
+{
+    width: 96px;
+    height: 96px;
+}
+  
+.delicon
+{
+    position: absolute;
+    content:url("./assets/delicon.png");
+    right: 0;
+    top: 0;
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+.delicon:hover
+{
+    opacity: 1;
+}
+
+.about
+{
+    font-size: 1.5em;
+}
