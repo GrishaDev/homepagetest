@@ -11,12 +11,29 @@
       }
   }
 
+
+  @keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
 body{
     background: url(./assets/bg.jpg) no-repeat center center fixed;
     /* background-color: goldenrod; */
     background-size: cover;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 .header
@@ -87,11 +104,13 @@ body{
 	border-radius: 4px; */
     transition: 0.3s;
     width: 100%;
+    /* animation: none; */
 }
 
 .card:hover {
     box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
     transform: translateY(-5%);
+    /* animation: float 6s ease-in-out infinite; */
 }
 
 .addicon
